@@ -6,7 +6,7 @@ services:
       POSTGRES_PASSWORD: admin123
       POSTGRES_DB: questions_db
     ports:
-      - "5432:5432"
+      - "5433:5432"   # <--- solo cambiá este número
     volumes:
       - postgres_data:/var/lib/postgresql/data
 

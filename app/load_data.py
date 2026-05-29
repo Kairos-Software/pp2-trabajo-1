@@ -30,9 +30,9 @@ def load_questions():
     session = SessionLocal()
     try:
         for _, row in df.iterrows():
-            # Convertir 'answers' a string manejando arrays
+
             answers_val = row['answers']
-            if hasattr(answers_val, 'tolist'):  # es array de NumPy
+            if hasattr(answers_val, 'tolist'):
                 answers_list = answers_val.tolist()
             elif isinstance(answers_val, list):
                 answers_list = answers_val
